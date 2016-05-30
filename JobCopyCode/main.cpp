@@ -6,7 +6,7 @@
 #include <vector>
 using namespace std;
 char s[20];
-bool judge(char s[]){//判断是哪种模式：R233C456模式 或 cc12。
+bool judge(char s[]){//判断是哪种模式：R233C456模式 或 cc12。    
 	int l=strlen(s);
 	int ans=0;
 	for(int i=1;i<l;i++)
@@ -21,7 +21,7 @@ int main(){
 	scanf("%d",&test);
 	while(test--){
 		scanf("%s",s);
-		if(judge(s)){//为R233C456模式，先数字行 后字母列。
+		if(judge(s)){//------第一种--为R233C456模式，先数字行 后字母列。
 			int l=strlen(s);
 			int r=0,c=0;
 			int rr=1,cc=1;
@@ -60,7 +60,7 @@ int main(){
 				st.pop();
 			}
 			printf("%d\n",r);
-		}else{
+		}else{//------第二种--为BC23模式，先字母列，后数字行。
 			int r=0,c=0;
 			int rr=1,cc=1;
 			int i,j,l=strlen(s);
